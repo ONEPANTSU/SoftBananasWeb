@@ -16,7 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from space.views import *
+
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("space/", include('space.urls')),
 ]
+
+handler404 = pageNotFound
