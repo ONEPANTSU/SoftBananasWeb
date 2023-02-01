@@ -15,14 +15,14 @@ Including another URLconf
 """
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import include, path
 
 from softbananas import settings
 from space.views import *
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("space/", include('space.urls')),
+    path("space/", include("space.urls")),
 ]
 
 if settings.DEBUG:
