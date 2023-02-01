@@ -2,3 +2,5 @@
 venv/
 
 softbananas/softbananas/__pycache__/
+
+softbananas/space/__pycache__/
