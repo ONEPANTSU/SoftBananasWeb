@@ -1,5 +1,7 @@
 from django.db import models
 
+
 # Create your models here.
 
-class 
+class Category(models.Model):
+    category = models.TextField(max_length=30)
