@@ -1,17 +1,23 @@
-from django.http import HttpResponse, HttpResponseNotFound
+from django.http import HttpResponseNotFound
 from django.shortcuts import render
 
 # Create your views here.
 
 
 def index(request):
-    if request.GET:
-        print(request.GET)
-    return HttpResponse("Index Page")
+    data = {
+        "title": "Главная страница",
+        "values": ["Soft", "Bananas", "inc."],
+        "obj": {
+            "OneResident": "Application by AndroidStudio",
+            "SawBirzha": "Telegram Bot by aiogram lib",
+        },
+    }
+    return render(request, "space/index.html", data)
 
 
-def login(request):
-    return HttpResponse("<h1>Log In</h1>")
+def about(request):
+    return render(request, "space/about.html")
 
 
 def pageNotFound(request, exception):

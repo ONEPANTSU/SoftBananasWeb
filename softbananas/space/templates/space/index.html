@@ -1,0 +1,24 @@
+{% extends 'space/layout.html' %}
+
+{% block title %}
+	SoftBananas inc.
+{% endblock %}
+
+{% block content %}
+	<div class="features">
+		<h1>{{ title }}</h1>
+		<p>Soft of SoftBananas inc. Soft of SoftBananas inc.
+			Soft of SoftBananas inc.Soft of SoftBananas inc.
+			Soft of SoftBananas inc. Soft of SoftBananas inc.</p>
+		<button class="btn btn-warning">О нас</button>
+		{% for el in values %}
+			<p>{{el}}</p>
+		{% endfor %}
+
+		{% for key, val in obj.items %}
+			{% filter upper%}
+				<p>{{key}} - {{val}}</p>
+			{% endfilter %}
+		{% endfor %}
+	</div>
+{% endblock %}
